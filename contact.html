@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Directions | Dragonfly Lodge Healing Arts</title>
+    <meta name="description"
+        content="Connect with Dragonfly Lodge. Book a session, find our hours of operation, see location details, and get answers to frequently asked questions.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific Styles for Contact Page */
+        .contact-page-grid {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: var(--spacing-xxl);
+            align-items: start;
+        }
+
+        .contact-form-container {
+            background-color: var(--color-bg-white);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .contact-info-block {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .info-card {
+            background-color: var(--color-bg-white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-md);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .info-card-title {
+            font-size: 1.15rem;
+            color: var(--color-primary-dark);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+
+        .info-card-text {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .hours-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Collapsible FAQ Details element styling */
+        .faq-wrapper {
+            margin-top: var(--spacing-xxl);
+        }
+
+        .faq-item {
+            background-color: var(--color-bg-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-sm);
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .faq-summary {
+            padding: var(--spacing-sm) var(--spacing-md);
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--color-text-main);
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            /* hide default arrow in chrome */
+        }
+
+        .faq-summary::-webkit-details-marker {
+            display: none;
+            /* hide default arrow in edge/safari */
+        }
+
+        .faq-summary::after {
+            content: '+';
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--color-accent);
+            transition: var(--transition-smooth);
+        }
+
+        .faq-item[open] .faq-summary::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+
+        .faq-content {
+            padding: 0 var(--spacing-md) var(--spacing-md);
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            border-top: 1px solid var(--color-border);
+            padding-top: var(--spacing-sm);
+        }
+
+        @media (max-width: 900px) {
+            .contact-page-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Module -->
+    <header class="header-wrapper">
+        <div class="container header-container">
+            <a href="index.html" class="brand-section">
+                <div class="brand-logo-container">
+                    <img src="practitioner_thumbnail.png" alt="Dragonfly Lodge Logo" class="brand-logo" />
+                </div>
+                <div>
+                    <h1 class="brand-title">Dragonfly Lodge</h1>
+                    <p class="brand-subtitle">Healing Arts</p>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle Hamburger -->
+            <button class="mobile-nav-toggle" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="articles.html" class="nav-link">Articles</a>
+                <a href="contact.html" class="nav-btn">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Subpage Header -->
+        <section class="subpage-hero">
+            <div class="container">
+                <span class="subtitle-badge">Connect With Us</span>
+                <h2 class="subpage-title">Drop Your Shoulders</h2>
+                <p class="subpage-subtitle">Drop us a line to discuss modalities, availability, or to schedule your
+                    intake.</p>
+            </div>
+        </section>
+
+        <!-- Interactive Form & Details Section -->
+        <section class="section-padding" style="background-color: var(--color-bg-base);">
+            <div class="container">
+                <div class="contact-page-grid">
+
+                    <!-- Booking Form (Left Side) -->
+                    <div class="contact-form-container">
+                        <h3 class="section-title"
+                            style="text-align: left; font-size: 1.6rem; margin-bottom: var(--spacing-sm);">Book an
+                            Appointment</h3>
+                        <p class="hero-desc" style="font-size: 0.9rem; margin-bottom: var(--spacing-md);">
+                            Please complete the booking questionnaire below. Andrea will connect with you by email or
+                            phone within 24 hours to confirm your scheduling time.
+                        </p>
+
+                        <form class="booking-inquiry-form" onsubmit="event.preventDefault();">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">First & Last Name</label>
+                                <input type="text" id="contact-name" required placeholder="Your Name"
+                                    class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" required placeholder="you@example.com"
+                                    class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-phone">Phone Number</label>
+                                <input type="tel" id="contact-phone" required placeholder="(555) 000-0000"
+                                    class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-modality">Preferred Modality</label>
+                                <select id="contact-modality" class="form-input" style="appearance: auto;">
+                                    <option value="jsj-60">Jin Shin Jyutsu - 60 Minutes ($60)</option>
+                                    <option value="jsj-tt-60">Jin Shin Jyutsu &amp; Therapeutic Touch - 60 Minutes ($70)
+                                    </option>
+                                    <option value="tt-30">Therapeutic Touch - 20-30 Minutes ($30)</option>
+                                    <option value="consult">Quick Consultation (Free / 15 Min Phone Call)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-message">Symptoms or Goals</label>
+                                <textarea id="contact-message"
+                                    placeholder="Please describe any physical symptoms, stress markers, or recovery goals you wish to target."
+                                    class="form-textarea"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Request Appointment Time</button>
+                        </form>
+                    </div>
+
+                    <!-- Side details: Address, Hours, FAQ teasers (Right Side) -->
+                    <div class="contact-info-block">
+
+                        <!-- Location Detail -->
+                        <div class="info-card">
+                            <h4 class="info-card-title"><span>📍</span> Location</h4>
+                            <p class="info-card-text">
+                                Sessions are available for house calls or treatment in-office in Larkspur, serving all
+                                of Marin County.
+                            </p>
+                            <p class="info-card-text"
+                                style="font-weight: 500; margin-top: 8px; color: var(--color-primary-dark);">
+                                Phone: 415-902-5344
+                            </p>
+                        </div>
+
+                        <!-- Hours of Operation -->
+                        <div class="info-card">
+                            <h4 class="info-card-title"><span>🕒</span> Operating Hours</h4>
+                            <p class="info-card-text"
+                                style="font-weight: 500; font-size: 0.95rem; color: var(--color-primary-dark); padding: var(--spacing-xs) 0;">
+                                Sessions are available by appointment only.
+                            </p>
+                            <p class="info-card-text" style="font-size: 0.85rem; margin-top: 4px;">
+                                Please use the booking form or reach out directly to inquire about current weekday and
+                                weekend openings.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- FAQ Accordions Section -->
+                <div class="faq-wrapper">
+                    <div class="section-title-wrap" style="margin-bottom: var(--spacing-lg);">
+                        <h3 class="section-title">Frequently Asked Questions</h3>
+                        <div class="section-divider"></div>
+                    </div>
+
+                    <!-- FAQ Item 1 -->
+                    <details class="faq-item">
+                        <summary class="faq-summary">What should I wear to a Jin Shin Jyutsu or Therapeutic Touch
+                            session?</summary>
+                        <div class="faq-content">
+                            <p>For both modalities, you remain completely clothed. We recommend wearing loose,
+                                comfortable clothing (such as soft pants, cotton shirts, or activewear) that allows you
+                                to lie down and rest comfortably on the massage table.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 2 -->
+                    <details class="faq-item">
+                        <summary class="faq-summary">How many sessions will I need to see results?</summary>
+                        <div class="faq-content">
+                            <p>Many clients report immediate nervous system relief, localized pain reduction, or
+                                emotional clarity during their very first session. For chronic tension, fatigue, or
+                                recovery goals, we recommend a series of 3 to 5 weekly sessions to build a stable
+                                energetic baseline.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 3 -->
+                    <details class="faq-item">
+                        <summary class="faq-summary">Can these healing modalities complement my standard medical
+                            treatment?</summary>
+                        <div class="faq-content">
+                            <p>Yes. Both Jin Shin Jyutsu and Therapeutic Touch are non-invasive and function beautifully
+                                as integrative treatments alongside chemotherapy, physical rehabilitation,
+                                cardiovascular regimens, and psychological therapy. They support the body's natural
+                                restorative state but do not replace professional medical diagnosis.</p>
+                        </div>
+                    </details>
+
+                    <!-- FAQ Item 4 -->
+                    <details class="faq-item">
+                        <summary class="faq-summary">What is your cancellation policy?</summary>
+                        <div class="faq-content">
+                            <p>We require at least 24 hours notice for any cancellations or schedule changes. Missed
+                                sessions or cancellations with less than 24 hours notice may be subject to a 50% session
+                                fee.</p>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Module -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html" class="footer-nav-link">Home</a>
+                <a href="about.html" class="footer-nav-link">About</a>
+                <a href="services.html" class="footer-nav-link">Services</a>
+                <a href="articles.html" class="footer-nav-link">Articles</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+            </div>
+            <p class="footer-contact-details">
+                Dragonfly Lodge Healing Arts &bull; San Francisco Bay Area &bull; 415-902-5344 &bull;
+                dragonflylodge.aa@gmail.com
+            </p>
+            <p class="footer-copyright">
+                &copy; 2026 Dragonfly Lodge Healing Arts. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Vanilla Script -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

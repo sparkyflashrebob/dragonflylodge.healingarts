@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Modalites | Dragonfly Lodge Healing Arts</title>
+    <meta name="description"
+        content="Explore our healing services: Jin Shin Jyutsu treatments, Therapeutic Touch sessions, and custom energetic alignment sessions at Dragonfly Lodge.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific Styles for Services Page */
+        .services-detail-section {
+            padding: var(--spacing-xxl) 0;
+            background-color: var(--color-bg-white);
+        }
+
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xxl);
+            margin-bottom: var(--spacing-xxl);
+            align-items: center;
+        }
+
+        .service-block.no-image {
+            grid-template-columns: 1fr;
+            max-width: 850px;
+            margin: 0 auto var(--spacing-xxl) auto;
+        }
+
+        .service-block:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-block:nth-child(even) .service-content {
+            direction: ltr;
+        }
+
+        .service-content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .service-meta {
+            display: flex;
+            gap: var(--spacing-md);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-accent-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .services-pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-xl);
+            background-color: var(--color-bg-base);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .services-pricing-table th,
+        .services-pricing-table td {
+            padding: var(--spacing-sm) var(--spacing-md);
+            text-align: left;
+        }
+
+        .services-pricing-table th {
+            background-color: var(--color-primary);
+            color: var(--color-bg-white);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .services-pricing-table tr {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .services-pricing-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .services-pricing-table td {
+            font-size: 0.9rem;
+            color: var(--color-text-main);
+        }
+
+        .services-pricing-table td.price {
+            font-weight: 600;
+            color: var(--color-accent-dark);
+            text-align: right;
+        }
+
+        .services-pricing-table th.price-header {
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+
+            .service-block,
+            .service-block:nth-child(even) {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-lg);
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Module -->
+    <header class="header-wrapper">
+        <div class="container header-container">
+            <a href="index.html" class="brand-section">
+                <div class="brand-logo-container">
+                    <img src="practitioner_thumbnail.png" alt="Dragonfly Lodge Logo" class="brand-logo" />
+                </div>
+                <div>
+                    <h1 class="brand-title">Dragonfly Lodge</h1>
+                    <p class="brand-subtitle">Healing Arts</p>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle Hamburger -->
+            <button class="mobile-nav-toggle" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="articles.html" class="nav-link">Articles</a>
+                <a href="contact.html" class="nav-btn">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Subpage Header -->
+        <section class="subpage-hero">
+            <div class="container">
+                <span class="subtitle-badge">Our Offerings</span>
+                <h2 class="subpage-title">Modalities & Pricing</h2>
+                <p class="subpage-subtitle">Customizable treatments tailored to your neural state and energetic flow.
+                </p>
+            </div>
+        </section>
+
+        <!-- Detailed Modalities Blocks -->
+        <section class="services-detail-section">
+            <div class="container">
+
+                <!-- Block 1: Jin Shin Jyutsu -->
+                <div class="service-block no-image">
+                    <div class="service-content">
+                        <div class="service-meta">
+                            <span>Somatic Art</span>
+                            <span>&bull;</span>
+                            <span>Non-Invasive Touch</span>
+                        </div>
+                        <h3 class="section-title" style="text-align: left; font-size: 1.8rem; margin-bottom: 0;">Jin
+                            Shin Jyutsu</h3>
+                        <p class="hero-desc" style="font-size: 0.95rem;">
+                            Jin Shin Jyutsu is a gentle oriental art that harmonizes the life energy within our bodies.
+                            Utilizing 26 Safety Energy Locks (SELs) located along primary pathways, our practitioner
+                            applies soft finger pressure to release blocks that create physical, mental, and chronic
+                            strain.
+                        </p>
+                        <p class="hero-desc" style="font-size: 0.95rem;">
+                            During a JSJ session, you remain fully clothed, resting comfortably on a padded therapy
+                            table. Andrea uses gentle, non-manipulative listening touch on pair locks, matching your
+                            nervous system dynamics to promote restorative parasympathetic state.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Block 2: Therapeutic Touch -->
+                <div class="service-block">
+                    <div class="service-content">
+                        <div class="service-meta">
+                            <span>Biofield Harmony</span>
+                            <span>&bull;</span>
+                            <span>Integrative Care</span>
+                        </div>
+                        <h3 class="section-title" style="text-align: left; font-size: 1.8rem; margin-bottom: 0;">
+                            Therapeutic Touch</h3>
+                        <p class="hero-desc" style="font-size: 0.95rem;">
+                            Therapeutic Touch (TT) is a modern, clinically tested healing modality based on natural
+                            energy alignment principles. By assessing the client's surrounding biofield, the
+                            practitioner works to soothe hyper-stimulated energy lines, helping the body channel its
+                            focus back toward self-repair.
+                        </p>
+                        <p class="hero-desc" style="font-size: 0.95rem;">
+                            TT is highly effective in hospital and clinical settings for accelerating wound repair,
+                            reducing chronic stress, and bringing intense emotional state back to quiet neutrality.
+                        </p>
+                    </div>
+                    <div class="hero-image-wrapper">
+                        <img src="cropped dragonfly and lotus blossom.png" alt="Dragonfly and Lotus Blossom"
+                            class="hero-image" />
+                    </div>
+                </div>
+
+                <!-- Modalities Pricing Table -->
+                <div class="section-title-wrap"
+                    style="margin-top: var(--spacing-xxl); margin-bottom: var(--spacing-md);">
+                    <h3 class="section-title">Treatment Rates</h3>
+                    <div class="section-divider"></div>
+                </div>
+
+                <table class="services-pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Treatment Session</th>
+                            <th>Duration</th>
+                            <th class="price-header">Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Standard Jin Shin Jyutsu Session</td>
+                            <td>60 Minutes</td>
+                            <td class="price">$60</td>
+                        </tr>
+                        <tr>
+                            <td>Jin Shin Jyutsu &amp; Therapeutic Touch</td>
+                            <td>60 Minutes</td>
+                            <td class="price">$70</td>
+                        </tr>
+                        <tr>
+                            <td>Therapeutic Touch</td>
+                            <td>20 - 30 Minutes</td>
+                            <td class="price">$30</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="pricing-note"
+                    style="text-align: center; margin-top: var(--spacing-md); font-style: italic; color: var(--color-text-muted); font-size: 0.95rem;">
+                    No one will be turned away due to lack of funds.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="philosophy-section">
+            <div class="container philosophy-container">
+                <a href="contact.html" class="btn-primary">Request a Session Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Module -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html" class="footer-nav-link">Home</a>
+                <a href="about.html" class="footer-nav-link">About</a>
+                <a href="services.html" class="footer-nav-link">Services</a>
+                <a href="articles.html" class="footer-nav-link">Articles</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+            </div>
+            <p class="footer-contact-details">
+                Dragonfly Lodge Healing Arts &bull; San Francisco Bay Area &bull; 415-902-5344 &bull;
+                dragonflylodge.aa@gmail.com
+            </p>
+            <p class="footer-copyright">
+                &copy; 2026 Dragonfly Lodge Healing Arts. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Vanilla Script -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

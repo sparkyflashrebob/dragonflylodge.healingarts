@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Insights & Articles | Dragonfly Lodge Healing Arts</title>
+    <meta name="description"
+        content="Read wellness insights, somatic advice, and educational content on energy healing and stress management from Dragonfly Lodge.">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific Styles for Articles Page */
+        .articles-page-section {
+            padding: var(--spacing-xxl) 0;
+            background-color: var(--color-bg-white);
+        }
+
+        .articles-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--spacing-lg);
+        }
+
+        .article-card {
+            background-color: var(--color-bg-base);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--color-accent);
+        }
+
+        .article-image-frame {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--color-primary-light);
+        }
+
+        .article-card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+        }
+
+        .article-card:hover .article-card-image {
+            transform: scale(1.05);
+        }
+
+        .article-body-context {
+            padding: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: var(--spacing-xs);
+        }
+
+        .article-tag {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--color-accent-dark);
+            letter-spacing: 0.05em;
+        }
+
+        .article-card-title {
+            font-size: 1.15rem;
+            color: var(--color-text-main);
+            line-height: 1.3;
+        }
+
+        .article-card-desc {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .article-read-more {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            text-decoration: underline;
+            margin-top: auto;
+            width: fit-content;
+        }
+
+        .article-read-more:hover {
+            color: var(--color-accent-dark);
+        }
+
+        @media (max-width: 900px) {
+            .articles-grid-layout {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .articles-grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Sticky Navigation Module -->
+    <header class="header-wrapper">
+        <div class="container header-container">
+            <a href="index.html" class="brand-section">
+                <div class="brand-logo-container">
+                    <img src="practitioner_thumbnail.png" alt="Dragonfly Lodge Logo" class="brand-logo" />
+                </div>
+                <div>
+                    <h1 class="brand-title">Dragonfly Lodge</h1>
+                    <p class="brand-subtitle">Healing Arts</p>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle Hamburger -->
+            <button class="mobile-nav-toggle" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="articles.html" class="nav-link">Articles</a>
+                <a href="contact.html" class="nav-btn">Connect</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Subpage Header -->
+        <section class="subpage-hero">
+            <div class="container">
+                <span class="subtitle-badge">Insights & Education</span>
+                <h2 class="subpage-title">Somatic Reflections</h2>
+                <p class="subpage-subtitle">Explorations in nervous system health, ancient arts, and conscious touch.
+                </p>
+            </div>
+        </section>
+
+        <!-- Articles Grid Section -->
+        <section class="articles-page-section">
+            <div class="container" style="text-align: center; padding: var(--spacing-xxl) 0;">
+                <p
+                    style="font-size: 1.25rem; font-style: italic; color: var(--color-text-muted); font-family: var(--font-heading);">
+                    Wellness insights and articles coming soon...
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="philosophy-section" style="background-color: var(--color-primary-dark);">
+            <div class="container philosophy-container">
+                <h3 class="philosophy-title">Subscribe to the Dragonfly Journey</h3>
+                <p class="philosophy-text"
+                    style="font-size: 0.95rem; max-width: 550px; margin-bottom: var(--spacing-sm);">
+                    Receive quarterly essays on natural rhythms, local healing circle schedules, and restorative tools
+                    delivered straight to your inbox.
+                </p>
+                <form onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();"
+                    style="display: flex; gap: 8px; width: 100%; max-width: 450px;">
+                    <input type="email" required placeholder="your.email@example.com" class="form-input"
+                        style="background-color: var(--color-bg-white); flex-grow: 1; border: none;">
+                    <button type="submit" class="btn-primary"
+                        style="background-color: var(--color-accent); font-size: 0.8rem; padding: 0.75rem 1.25rem;">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Module -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-nav">
+                <a href="index.html" class="footer-nav-link">Home</a>
+                <a href="about.html" class="footer-nav-link">About</a>
+                <a href="services.html" class="footer-nav-link">Services</a>
+                <a href="articles.html" class="footer-nav-link">Articles</a>
+                <a href="contact.html" class="footer-nav-link">Contact</a>
+            </div>
+            <p class="footer-contact-details">
+                Dragonfly Lodge Healing Arts &bull; San Francisco Bay Area &bull; 415-902-5344 &bull;
+                dragonflylodge.aa@gmail.com
+            </p>
+            <p class="footer-copyright">
+                &copy; 2026 Dragonfly Lodge Healing Arts. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Vanilla Script -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
