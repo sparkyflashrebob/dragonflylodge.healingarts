@@ -102,6 +102,20 @@
             text-align: right;
         }
 
+        .jsj-logo-wrapper {
+            max-width: 300px;
+            margin-left: auto;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+        }
+
+        .tt-logo-wrapper {
+            max-width: 320px;
+            margin-right: auto;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+        }
+
         @media (max-width: 768px) {
 
             .service-block,
@@ -109,6 +123,12 @@
                 grid-template-columns: 1fr;
                 gap: var(--spacing-lg);
                 direction: ltr;
+            }
+
+            .jsj-logo-wrapper,
+            .tt-logo-wrapper {
+                margin: 0 auto;
+                max-width: 280px;
             }
         }
     </style>
@@ -161,7 +181,7 @@
             <div class="container">
 
                 <!-- Block 1: Jin Shin Jyutsu -->
-                <div class="service-block no-image">
+                <div class="service-block">
                     <div class="service-content">
                         <div class="service-meta">
                             <span>Somatic Art</span>
@@ -182,6 +202,9 @@
                             table. Andrea uses gentle, non-manipulative listening touch on energy centers, matching your
                             nervous system dynamics to promote restorative parasympathetic state.
                         </p>
+                    </div>
+                    <div class="hero-image-wrapper jsj-logo-wrapper">
+                        <img src="Jin Shin Jyutsu logo.jpeg" alt="Jin Shin Jyutsu Logo" class="hero-image" />
                     </div>
                 </div>
 
@@ -206,9 +229,8 @@
                             reducing chronic stress, and bringing intense emotional state back to quiet neutrality.
                         </p>
                     </div>
-                    <div class="hero-image-wrapper">
-                        <img src="cropped dragonfly and lotus blossom.png" alt="Dragonfly and Lotus Blossom"
-                            class="hero-image" />
+                    <div class="hero-image-wrapper tt-logo-wrapper">
+                        <img src="Therapeutic Touch logo.jpeg" alt="Therapeutic Touch Logo" class="hero-image" />
                     </div>
                 </div>
 
