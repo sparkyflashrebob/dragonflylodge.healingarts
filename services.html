@@ -109,6 +109,31 @@
             overflow: hidden;
         }
 
+        .jsj-logo-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .jsj-logo-text {
+            font-size: 0.82rem;
+            font-style: italic;
+            color: var(--color-text-muted);
+            max-width: 300px;
+            margin-left: auto;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        .jsj-logo-text a {
+            color: var(--color-accent-dark);
+            text-decoration: underline;
+        }
+
+        .jsj-logo-text a:hover {
+            color: var(--color-primary);
+        }
+
         .tt-logo-wrapper {
             max-width: 320px;
             margin-right: auto;
@@ -133,7 +158,9 @@
         }
 
         @media (max-width: 768px) {
-            .tt-member-text {
+
+            .tt-member-text,
+            .jsj-logo-text {
                 margin: 0 auto;
                 text-align: center;
             }
@@ -226,8 +253,15 @@
                             nervous system dynamics to promote a restorative state.
                         </p>
                     </div>
-                    <div class="hero-image-wrapper jsj-logo-wrapper">
-                        <img src="Jin Shin Jyutsu logo.jpeg" alt="Jin Shin Jyutsu Logo" class="hero-image" />
+                    <div class="jsj-logo-container">
+                        <div class="hero-image-wrapper jsj-logo-wrapper">
+                            <img src="Jin Shin Jyutsu logo.jpeg" alt="Jin Shin Jyutsu Logo" class="hero-image" />
+                        </div>
+                        <p class="jsj-logo-text">
+                            Jin Shin Jyutsu in Kanji<br>
+                            Logo for Jin Shin Jyutsu - Spirit, Mind, Body<br>
+                            <a href="https://www.jsjsmb.com" target="_blank" rel="noopener">www.jsjsmb.com</a>
+                        </p>
                     </div>
                 </div>
 
