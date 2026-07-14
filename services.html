@@ -116,6 +116,29 @@
             overflow: hidden;
         }
 
+        .tt-logo-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tt-member-text {
+            font-size: 0.82rem;
+            font-style: italic;
+            color: var(--color-text-muted);
+            max-width: 320px;
+            margin-right: auto;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .tt-member-text {
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+
         @media (max-width: 768px) {
 
             .service-block,
@@ -229,8 +252,13 @@
                             reducing chronic stress, and bringing intense emotional state back to quiet neutrality.
                         </p>
                     </div>
-                    <div class="hero-image-wrapper tt-logo-wrapper">
-                        <img src="Therapeutic Touch logo.jpeg" alt="Therapeutic Touch Logo" class="hero-image" />
+                    <div class="tt-logo-container">
+                        <div class="hero-image-wrapper tt-logo-wrapper">
+                            <img src="Therapeutic Touch logo.jpeg" alt="Therapeutic Touch Logo" class="hero-image" />
+                        </div>
+                        <p class="tt-member-text">
+                            Member of Therapeutic Touch International Association
+                        </p>
                     </div>
                 </div>
 
