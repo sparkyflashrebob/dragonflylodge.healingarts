@@ -195,25 +195,32 @@
                             phone within 24 hours to confirm your scheduling time.
                         </p>
 
-                        <form class="booking-inquiry-form" onsubmit="event.preventDefault();">
+                        <form class="booking-inquiry-form" data-web3forms>
+                            <input type="hidden" name="access_key" value="ea6cadde-bbe2-4089-a41a-bb8b91fb1920">
+                            <input type="hidden" name="subject"
+                                value="New Booking Appointment Request - Dragonfly Lodge">
+                            <input type="hidden" name="from_name" value="Dragonfly Lodge Booking">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                             <div class="form-group">
                                 <label class="form-label" for="contact-name">First & Last Name</label>
-                                <input type="text" id="contact-name" required placeholder="Your Name"
+                                <input type="text" id="contact-name" name="name" required placeholder="Your Name"
                                     class="form-input">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="contact-email">Email Address</label>
-                                <input type="email" id="contact-email" required placeholder="you@example.com"
-                                    class="form-input">
+                                <input type="email" id="contact-email" name="email" required
+                                    placeholder="you@example.com" class="form-input">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="contact-phone">Phone Number</label>
-                                <input type="tel" id="contact-phone" required placeholder="(555) 000-0000"
+                                <input type="tel" id="contact-phone" name="phone" required placeholder="(555) 000-0000"
                                     class="form-input">
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="contact-modality">Preferred Modality</label>
-                                <select id="contact-modality" class="form-input" style="appearance: auto;">
+                                <select id="contact-modality" name="modality" class="form-input"
+                                    style="appearance: auto;">
                                     <option value="jsj-60">Jin Shin Jyutsu - 60 Minutes ($60)</option>
                                     <option value="jsj-tt-60">Jin Shin Jyutsu &amp; Therapeutic Touch - 60 Minutes ($70)
                                     </option>
@@ -223,7 +230,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-label" for="contact-message">Symptoms or Goals</label>
-                                <textarea id="contact-message"
+                                <textarea id="contact-message" name="message"
                                     placeholder="Please describe any physical symptoms, stress markers, or recovery goals you wish to target."
                                     class="form-textarea"></textarea>
                             </div>
